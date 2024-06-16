@@ -1,4 +1,29 @@
-class Sensor {}
+class Sensor {
+    constructor(id, name, type, value, unit, updated_at) {
+        this.id = id;
+        this.name = name;
+        this.setType(type);
+        this.value = value;
+        this.unit = unit;
+        this.updated_at = updated_at;
+    }
+
+    setType(type) {
+        const validTypes = ['temperature', 'humidity', 'pressure'];
+        if (validTypes.includes(type)) {
+            this.type = type;
+        } else {
+            throw new Error(`Tipo "${type}" no es válido. Los tipos válidos son: ${validTypes.join(', ')}
+            `);
+        }
+    }
+
+    set updateValue(newValue) {
+        let ahora = new Date()
+        this.value = newValue;
+        this.updated_at = ahora.toISOString();
+    }
+}
 
 class SensorManager {
     constructor() {
@@ -33,7 +58,26 @@ class SensorManager {
         }
     }
 
-    async loadSensors(url) {}
+    async loadSensors(url) {
+        try {
+            const response = await fetch(url);
+            const datos = await response.json();
+            datos.forEach(infoSensor => {
+                const sensor = new Sensor(
+                    infoSensor.id,
+                    infoSensor.name,
+                    infoSensor.type,
+                    infoSensor.value,
+                    infoSensor.unit,
+                    infoSensor.updated_at
+                );
+                this.addSensor(sensor);
+            });
+            this.render();
+        } catch (error) {
+            console.error('Error no se cargo el sensor:', error);
+        }
+    }
 
     render() {
         const container = document.getElementById("sensor-container");
