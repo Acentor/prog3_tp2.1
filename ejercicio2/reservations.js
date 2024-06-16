@@ -1,6 +1,36 @@
-class Customer {}
+class Customer {
+    constructor(id, name, email) {
+        this.id = id;
+        this.name = name;
+        this.email = email
+    }
+    info() {
+        return `Nombre del Comensal: ${this.name} - Direccion de Email: ${this.email}`;
+    }
+}
 
-class Reservation {}
+class Reservation {
+    constructor(id, customer, date, guests) {
+        this.id = id;
+        this.customer = customer;
+        this.date = date;
+        this.guests = guests;
+    }
+
+    info() {
+        return `Fecha de la reserva es: ${this.date} - 
+        Reservado a Nombre de: ${this.customer.name} - 
+        El Numero de Comensales es: ${this.guests}`;
+    }
+
+    static validateReservation(date, guests) {
+        const fechaReservacion = new Date(date);
+        if ((guests > 0) && (fechaReservacion > new Date())) {
+            return true;
+        } else {
+            return false;
+        }
+    }}
 
 class Restaurant {
     constructor(name) {
@@ -18,6 +48,9 @@ class Restaurant {
         this.reservations.forEach((reservation) => {
             const reservationCard = document.createElement("div");
             reservationCard.className = "box";
+            
+
+            /* se modifico la llamada de reservation.info por reservation.info() asi llama corectamente a la funcion y no a la propiedad */
             reservationCard.innerHTML = `
                     <p class="subtitle has-text-primary">
                         Reserva ${
@@ -27,7 +60,7 @@ class Restaurant {
                     <div class="card-content">
                         <div class="content">
                             <p>
-                                ${reservation.info}
+                                ${reservation.info()}
                             </p>
                         </div>
                     </div>

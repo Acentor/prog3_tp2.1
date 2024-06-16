@@ -9,12 +9,11 @@ class Sensor {
     }
 
     setType(type) {
-        const validTypes = ['temperature', 'humidity', 'pressure'];
-        if (validTypes.includes(type)) {
+        const typosValidos = ['temperature', 'humidity', 'pressure'];
+        if (typosValidos.includes(type)) {
             this.type = type;
         } else {
-            throw new Error(`Tipo "${type}" no es válido. Los tipos válidos son: ${validTypes.join(', ')}
-            `);
+            throw new Error(`Tipo "${type}" no es válido. Los tipos válidos son: ${typosValidos.join(', ')}`);
         }
     }
 
@@ -24,7 +23,6 @@ class Sensor {
         this.updated_at = ahora.toISOString();
     }
 }
-
 class SensorManager {
     constructor() {
         this.sensors = [];
@@ -78,6 +76,7 @@ class SensorManager {
             console.error('Error no se cargo el sensor:', error);
         }
     }
+    
 
     render() {
         const container = document.getElementById("sensor-container");
