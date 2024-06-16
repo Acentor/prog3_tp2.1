@@ -1,4 +1,4 @@
-NOTA: /* se modifico la llamada de reservation.info por reservation.info() asi llama corectamente a la funcion y no a la propiedad */
+NOTA: /* se modifico la llamada de reservation.info por reservation.info() asi llama correctamente a la funcion y no a la propiedad */
 
 
 
