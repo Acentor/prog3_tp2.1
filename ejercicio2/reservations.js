@@ -3,6 +3,7 @@ class Customer {
         this.id = id;
         this.name = name;
         this.email = email
+        this.info= this.info();
     }
     info() {
         return `Nombre del Comensal: ${this.name} - Direccion de Email: ${this.email}`;
@@ -48,9 +49,7 @@ class Restaurant {
         this.reservations.forEach((reservation) => {
             const reservationCard = document.createElement("div");
             reservationCard.className = "box";
-            
 
-            /* se modifico la llamada de reservation.info por reservation.info() asi llama corectamente a la funcion y no a la propiedad */
             reservationCard.innerHTML = `
                     <p class="subtitle has-text-primary">
                         Reserva ${
@@ -60,7 +59,7 @@ class Restaurant {
                     <div class="card-content">
                         <div class="content">
                             <p>
-                                ${reservation.info()}
+                                ${reservation.info}
                             </p>
                         </div>
                     </div>
