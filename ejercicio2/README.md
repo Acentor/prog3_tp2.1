@@ -1,7 +1,3 @@
-NOTA: /* se modifico la llamada de reservation.info por reservation.info() asi llama correctamente a la funcion y no a la propiedad */
-
-
-
 # Ejercicio 2
 
 En este ejercicio se solicita completar la implementación de la página de **reservas** de un restaurante.
