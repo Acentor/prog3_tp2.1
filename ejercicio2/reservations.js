@@ -16,6 +16,7 @@ class Reservation {
         this.customer = customer;
         this.date = date;
         this.guests = guests;
+        this.info= this.info();
     }
 
     info() {
