@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
         <link
             rel="icon"
             href="https://academiacimneiber.com/assets/logoClaro-Z6OnHFdL.png"
-        />
+        >
         <title>Conversor de Moneda</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
-        />
+        >
     </head>
     <body>
         <section class="section">
@@ -22,13 +22,13 @@
                         <div class="field">
                             <label class="label">Cantidad</label>
                             <div class="control">
-                                <input
+                                <input title="cantidad"
                                     class="input"
                                     type="number"
                                     step="any"
                                     id="amount"
                                     required
-                                />
+                                >
                             </div>
                         </div>
                         <div class="columns is-multiline is-vcentered">
@@ -37,7 +37,7 @@
                                     <label class="label">De</label>
                                     <div class="control">
                                         <div class="select">
-                                            <select id="from-currency"></select>
+                                            <select title="de" id="from-currency"></select>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                     <label class="label">A</label>
                                     <div class="control">
                                         <div class="select">
-                                            <select id="to-currency"></select>
+                                            <select title="a" id="to-currency"></select>
                                         </div>
                                     </div>
                                 </div>

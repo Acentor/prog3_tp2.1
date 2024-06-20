@@ -130,4 +130,4 @@ class SensorManager {
 
 const monitor = new SensorManager();
 
-monitor.loadSensors("sensors.json");
+monitor.loadSensors("./sensors.json");
