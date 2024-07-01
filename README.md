@@ -1,3 +1,14 @@
+# NOTA para el ej1 deve verse en un servidor local, para ejecutar correctamente, para los demas ej se pueden mostrar directamente desde el archivo html
+
+
+
+
+
+
+
+
+
+
 # Trabajo Práctico 2.1 - Programación en JavaScript
 
 El objetivo de este trabajo es profundizar en los temas de **programación orientada a objetos** y **asincronía** en JavaScript.
