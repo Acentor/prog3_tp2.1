@@ -1,4 +1,4 @@
-# NOTA para el ej1 deve verse en un servidor local, para ejecutar correctamente, para los demas ej se pueden mostrar directamente desde el archivo html
+# NOTA para el ej1 debe verse en un servidor local, para ejecutar correctamente, para los demas ej se pueden mostrar directamente desde el archivo html
 
 
 
